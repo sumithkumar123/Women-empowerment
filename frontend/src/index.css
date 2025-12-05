@@ -1,0 +1,195 @@
+:root {
+  --primary: #D44286;
+  /* Deep Pink */
+  --secondary: #FF9FB2;
+  /* Soft Peach */
+  --accent: #8E44AD;
+  /* Royal Purple */
+  --bg-gradient: linear-gradient(135deg, #FFF0F5 0%, #E6E6FA 100%);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --text: #2D3436;
+  --text-light: #636e72;
+  --white: #ffffff;
+  --radius: 24px;
+
+  --font-body: 'Outfit', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: url('/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  margin-top: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+  transition: all 0.3s ease;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  /* Whiter, flatter for info */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow */
+  border-radius: 20px;
+}
+
+/* Action Cards - DISTINCT from Panels */
+.action-card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  /* More rounded */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  /* No border for actions */
+  color: white;
+  /* Always white text */
+}
+
+.action-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.interactive-card {
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(212, 66, 134, 0.2);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.interactive-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+.glass-btn {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(212, 66, 134, 0.3);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 66, 134, 0.4);
+}
+
+.input-field {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: white;
+}
+
+/* Page Layouts */
+.center-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  max-width: 800px;
+  /* Wider for desktop feel */
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px;
+  /* Space for bottom nav if we add one */
+}
+
+/* Cards */
+.card {
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.role-badge {
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}

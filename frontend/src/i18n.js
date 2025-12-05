@@ -1,0 +1,158 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+    en: {
+        translation: {
+            "welcome": "Welcome",
+            "choose_language": "Choose Your Language",
+            "login": "Login",
+            "register": "Register",
+            "phone": "Mobile Number",
+            "aadhaar": "Aadhaar Number",
+            "continue": "Continue",
+            "dashboard": "Dashboard",
+            "create_task": "Post a New Task",
+            "find_work": "Find Work Nearby",
+            "task_desc": "Task Description",
+            "budget": "Budget (₹)",
+            "security_check": "Security Check: Women Only",
+            "enter_otp": "Enter OTP",
+            "verify": "Verify",
+            "role_customer": "Customer",
+            "role_worker": "Worker",
+            "loc_not_set": "Location not set",
+            "empowering_you": "Empowering You",
+            "quote": "There is no limit to what we, as women, can accomplish.",
+            "quick_actions": "Quick Actions",
+            "create_task_desc": "Needs someone for cooking, cleaning, or tech support?",
+            "my_posted_tasks": "My Posted Tasks",
+            "my_posted_tasks_desc": "Track status and chat securely with workers.",
+            "find_work_desc": "Browse tasks matching your skills:",
+            "my_accepted_tasks": "My Accepted Tasks",
+            "my_accepted_tasks_desc": "View your ongoing jobs and earnings.",
+            "browse_categories": "Browse Categories",
+            "tailoring": "Tailoring",
+            "cooking": "Cooking",
+            "online": "Online Work",
+            "crafts": "Arts & Crafts",
+            "safety_guidelines": "Safety Guidelines",
+            "safety_1": "Always verify the task details before accepting.",
+            "safety_2": "Use the in-app secure chat; do not share personal numbers.",
+            "safety_3": "Emergency Help Button is available in Settings.",
+            "success_stories": "Success Stories",
+            "testimonial_text": "I earned ₹5000 this week through Feminine Shakthi!",
+            "testimonial_author": "Lakshmi, Hyd",
+            "top_rated_worker": "Top Rated Worker",
+            "about_us": "About Us",
+            "privacy_policy": "Privacy Policy",
+            "contact_support": "Contact",
+            "take_work": "Take Work",
+            "give_work": "Give Work"
+        }
+    },
+    hi: {
+        translation: {
+            "welcome": "नमस्ते",
+            "choose_language": "अपनी भाषा चुनें",
+            "login": "लॉग इन",
+            "register": "पंजीकरण",
+            "phone": "मोबाइल नंबर",
+            "aadhaar": "आधार नंबर",
+            "dashboard": "डैशबोर्ड",
+            "create_task": "नया काम पोस्ट करें",
+            "find_work": "काम खोजें",
+            "security_check": "सुरक्षा जांच: केवल महिलाएं",
+            "role_customer": "ग्राहक",
+            "role_worker": "वर्कर",
+            "loc_not_set": "स्थान सेट नहीं है",
+            "empowering_you": "आपको सशक्त बनाना",
+            "quote": "महिलाओं के रूप में हम क्या हासिल कर सकती हैं, इसकी कोई सीमा नहीं है।",
+            "quick_actions": "त्वरित कार्य",
+            "create_task_desc": "खाना पकाने, सफाई या तकनीकी सहायता के लिए किसी की आवश्यकता है?",
+            "my_posted_tasks": "मेरे पोस्ट किए गए कार्य",
+            "my_posted_tasks_desc": "स्थिति ट्रैक करें और वर्कर से सुरक्षित रूप से चैट करें।",
+            "find_work_desc": "अपने कौशल से मेल खाते काम ब्राउज़ करें:",
+            "my_accepted_tasks": "मेरे स्वीकृत कार्य",
+            "my_accepted_tasks_desc": "अपनी चल रही नौकरियों और कमाई देखें।",
+            "browse_categories": "श्रेणियाँ ब्राउज़ करें",
+            "tailoring": "सिलाई",
+            "cooking": "खाना बनाना",
+            "online": "ऑनलाइन काम",
+            "crafts": "कला और शिल्प",
+            "safety_guidelines": "सुरक्षा दिशानिर्देश",
+            "safety_1": "स्वीकार करने से पहले हमेशा कार्य विवरण सत्यापित करें।",
+            "safety_2": "इन-ऐप सुरक्षित चैट का उपयोग करें; व्यक्तिगत नंबर साझा न करें।",
+            "safety_3": "आपातकालीन सहायता बटन सेटिंग्स में उपलब्ध है।",
+            "success_stories": "सफलता की कहानियाँ",
+            "testimonial_text": "मैंने इस सप्ताह फेमिनिन शक्ति के माध्यम से ₹5000 कमाए!",
+            "testimonial_author": "लक्ष्मी, हैदराबाद",
+            "top_rated_worker": "टॉप रेटेड वर्कर",
+            "about_us": "हमारे बारे में",
+            "privacy_policy": "गोपनीयता नीति",
+            "contact_support": "संपर्क करें",
+            "take_work": "काम करना है",
+            "give_work": "काम देना है"
+        }
+    },
+    te: {
+        translation: {
+            "welcome": "స్వాగతం",
+            "choose_language": "మీ భాషను ఎంచుకోండి",
+            "login": "లాగిన్",
+            "register": "రిజిస్టర్",
+            "phone": "మొబైల్ నంబర్",
+            "aadhaar": "ఆధార్ సంఖ్య",
+            "dashboard": "డ్యాష్‌బోర్డ్",
+            "create_task": "కొత్త పనిని సృష్టించండి",
+            "find_work": "పనిని కనుగొనండి",
+            "security_check": "భద్రతా తనిఖీ: మహిళలు మాత్రమే",
+            "role_customer": "కస్టమర్",
+            "role_worker": "వర్కర్",
+            "loc_not_set": "స్థానం సెట్ చేయబడలేదు",
+            "empowering_you": "మిమ్మల్ని శక్తివంతం చేయడం",
+            "quote": "మహిళలుగా మనం సాధించగలిగే వాటికి పరిమితి లేదు.",
+            "quick_actions": "త్వరిత చర్యలు",
+            "create_task_desc": "వంట, శుభ్రపరచడం లేదా టెక్ సహాయం కోసం ఎవరైనా కావాలా?",
+            "my_posted_tasks": "నా పోస్టు చేసిన పనులు",
+            "my_posted_tasks_desc": "స్థితిని ట్రాక్ చేయండి మరియు వర్కర్లతో సురక్షితంగా చాట్ చేయండి.",
+            "find_work_desc": "మీ నైపుణ్యాలకు సరిపోయే పనులను చూడండి:",
+            "my_accepted_tasks": "నేను అంగీకరించిన పనులు",
+            "my_accepted_tasks_desc": "మీ కొనసాగుతున్న ఉద్యోగాలు మరియు ఆదాయాలను వీక్షించండి.",
+            "browse_categories": "వర్గాలను చూడండి",
+            "tailoring": "టైలరింగ్",
+            "cooking": "వంట",
+            "online": "ఆన్‌లైన్ వర్క్",
+            "crafts": "హస్తకళలు",
+            "safety_guidelines": "భద్రతా మార్గదర్శకాలు",
+            "safety_1": "అంగీకరించే ముందు ఎల్లప్పుడూ పని వివరాలను ధృవీకరించండి.",
+            "safety_2": "యాప్‌లోని సురక్షిత చాట్‌ని ఉపయోగించండి; వ్యక్తిగత నంబర్లను పంచుకోవద్దు.",
+            "safety_3": "ఎమర్జెన్సీ హెల్ప్ బటన్ సెట్టింగ్‌లలో అందుబాటులో ఉంది.",
+            "success_stories": "విజయ గాథలు",
+            "testimonial_text": "నేను ఈ వారం ఫెమినిన్ శక్తి ద్వారా ₹5000 సంపాదించాను!",
+            "testimonial_author": "లక్ష్మి, హైదరాబాద్",
+            "top_rated_worker": "టాప్ రేటెడ్ వర్కర్",
+            "about_us": "మా గురించి",
+            "privacy_policy": "గోప్యతా విధానం",
+            "contact_support": "మమ్మల్ని సంప్రదించండి",
+            "take_work": "పని కావలి",
+            "give_work": "పని ఇస్తాను"
+        }
+    }
+};
+
+i18n
+    .use(initReactI18next)
+    .init({
+        resources,
+        lng: localStorage.getItem('language') || 'en',
+        fallbackLng: 'en',
+        interpolation: {
+            escapeValue: false
+        },
+        react: {
+            useSuspense: false
+        }
+    });
+
+export default i18n;
